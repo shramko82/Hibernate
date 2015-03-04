@@ -5,6 +5,8 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 @Entity (name="users")
@@ -13,8 +15,10 @@ public class Users {
 	@Id
 	private int id;
 	@Column(name="name")
+	
 	private String Name;
 	private String LastName;
+	@Temporal(TemporalType.DATE)
 	private Date Date_Birth;
 	public int getId() {
 		return id;
